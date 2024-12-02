@@ -1,3 +1,4 @@
+Evan_Lee_Final_Game.py
 import time
 #time makes it where it can pause the program for "x" seconds which is useful if you want the user to wait
 import random
@@ -63,7 +64,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 """
-print (Splash) #prints ASCII art which is shown above
+print (Splash)
 
 health = 500 #this is the starting health for the player
 
@@ -86,6 +87,7 @@ def ending(): #if the player beats the game, this screen pops up
     input("")
     input("Press Enter to quit the program.") #smooth way to end the program
 
+
 def youlost_health(): #this is if the player looses the game by loosing all health, this part shows
 
     print(" You've lost all your health")
@@ -95,14 +97,16 @@ def youlost_health(): #this is if the player looses the game by loosing all heal
     print("Health: " + str(health) + ".")
     print("Cargo: " + str(goodies_list) + ".")
 
+
 def youlost_cargo(): #this is if the player looses the game by loosing all cargo, this part shows
 
     print(" You've lost all your cargo")
     input("")
     print("You ended with:")
     input("")
-    print("health: " + str(health) + ".")
+    print("Health: " + str(health) + ".")
     print("Cargo: None left.")
+
 
 def multi_question1(): 
 #multiple choice question number 1
@@ -977,7 +981,7 @@ def time_question1():
     timer_thread.join()
 
 def time_question2():
-
+#essentially copy pasted from time question 1, but the contents are changed, same for the other timed questioms
     global health   #global makes health variable work for functions
     # Function to run the timer on a separate line
     def run_timer(duration, stop_event):
@@ -2423,7 +2427,7 @@ def type_question1():
             print(" This is what cargo you have left: " + str(goodies_list) + ".")
             input("")
             type_question3() 
-        
+
 def type_question2():
     global health
     print("\u001b[33mQuestion #2: What is a dessert soup made from ground almonds?\u001b[0m")
@@ -2476,6 +2480,7 @@ def type_question2():
             print(" This is what cargo you have left: " + str(goodies_list) + ".")
             input("")
             type_question3() 
+#essentially copy pasted from typed question 1, but the contents are changed, same for the other typed questioms
 
 def type_question3():
     global health
@@ -2583,7 +2588,7 @@ def type_question4():
             input("")
             type_question5() 
 
-def type_question5(): 
+def type_question5():
     global health
     print("\u001b[33mQuestion #5: Which dish is a steamed sponge cake, known for its light and fluffy texture?\u001b[0m")
     input("")
@@ -2654,7 +2659,7 @@ def type_question5():
                 print("\u001b[37m \u001b")
                 type_question6()
           
-def type_question6(): 
+def type_question6():
     global health
     print("\u001b[33mQuestion #6: When is Cantonese Soup Generally Consumed? (Your answer should be about if its: before, during or after a meal)\u001b[0m")
     input("")
@@ -2725,7 +2730,7 @@ def type_question6():
                 print("\u001b[37m \u001b")
                 type_question7()     
 
-def type_question7(): 
+def type_question7():
     global health
     print("\u001b[33mQuestion #7: Which dish involves thinly sliced ingredients served with a boiling pot of broth?\u001b[0m")
     input("")
@@ -3053,7 +3058,7 @@ while (validChoice == False): #beginning of the program starts here
         print("You will also start with 500 health in beginning, you loose 100 health for every question wrong.")
         input("")
         print("What type of Cantonese food questions during the game would you like? (WARNING: YOU WILL NOT be able to see how much time you have left for the timed multiple choice questions)")
-        print("\u001b[31m!!!WARNING!!!: The timed multiple choice quests are glitchy at times.\u001b") 
+        print("\u001b[31m!!!WARNING!!!: The timed multiple choice questions are glitchy at times.\u001b") 
         input("\033[1;32;m")        
 
         print("There are 3 different types of questions:")
@@ -3067,7 +3072,7 @@ while (validChoice == False): #beginning of the program starts here
         answer_question = int(input("\x1B[4mChoose one of the options above by typing 1 for the first option, 2 for the second option, or 3 for the third option.\u001b\033[0m\n"))
         #answer_question is for when the user is choosing a type of question for the game
 
-        if answer_question == 1:
+        if answer_question == 1: #if they choose multiple choice questions
 
             print("You chose the multiple choice questions for the game.")
             input("")
@@ -3078,7 +3083,7 @@ while (validChoice == False): #beginning of the program starts here
             validChoice = True
             multi_question1() # here we call the first multiple choice questions directly
 
-        if answer_question == 2:
+        if answer_question == 2: #if they choose timed multiple choice questions
 
             print("You chose the timed multiple choice questions for the game.")
             input("")
@@ -3091,7 +3096,7 @@ while (validChoice == False): #beginning of the program starts here
             validChoice = True
             time_question1()
 
-        if answer_question == 3:
+        if answer_question == 3: #if they choose short answer questions
 
             print("You chose the short answers questions for the game.")
             input("")
@@ -3116,7 +3121,7 @@ while (validChoice == False): #beginning of the program starts here
         print("Good choice " + username + "!\n")
 
         print("What type of Cantonese food questions during the game would you like?")
-        print("\u001b[31m!!!WARNING!!!: The timed multiple choice quests are glitchy at times.\u001b") 
+        print("\u001b[31m!!!WARNING!!!: The timed multiple choice questions are glitchy at times.\u001b") 
         input("\033[1;32;m")
 
 
